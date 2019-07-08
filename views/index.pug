@@ -1,8 +1,16 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  p.
-    Name is not Sebian
-    But SEBIANN
+  section.section
+    .container
+      .tile.is-ancestor
+        .tile.is-4.is-vertical.is-parent
+          .tile.is-child.box
+            .columns
+              .column.is-one-third
+                figure.image
+                  img.is-rounded(src="/images/sebi-logo.png", alt="Sebi")
+              .column
+                p.title BAGACK
+                p.subtitle
+                  | My name is SEBIANN.
