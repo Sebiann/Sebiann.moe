@@ -1,0 +1,56 @@
+extends layout
+
+block content
+  section.section
+    .container
+      .columns
+        .column.is-one-third
+          .card.card-equal-height
+            .card-image
+              figure.image
+                img(src='/images/minecraft/realm-server.png', alt='Screenshot of Server')
+            .card-content
+              .media
+                .media-left
+                  figure.image.is-48x48
+                    img(src='/images/minecraft/seb_bust.png', alt="Seb's Bust")
+                .media-content
+                  p.title.is-4 Realm Server
+                  p.subtitle.is-6 Owner: Sebiann
+            .content
+                p.subtitle IP: realm.sebiann.moe
+                | We are playing on this one right now.
+                = ms.init('realm.sebiann.moe', 25565, function(result){
+                      console.log("Minecraft server status of " + ms.address + " on port " + ms.port + ":");
+                      if(ms.online)
+                      {
+                        console.log("Server is online running version " + ms.version + " with " + ms.current_players + " out of " + ms.max_players + " players.");
+                        console.log("Message of the day: " + ms.motd);
+                        console.log("Latency: " + ms.latency + "ms");
+                      }
+                      else
+                      {
+                        console.log("Server is offline!");
+                      }
+                    });
+                a(href="https://forms.gle/oamj8151qgLGgj1w5" target="_blank")
+                  p Link to Whitelist Form
+
+        .column.is-one-third
+          .card.card-equal-height
+            .card-image
+              figure.image
+                img(src='/images/minecraft/dargon-server.png', alt='Screenshot of Server')
+            .card-content
+              .media
+                .media-left
+                  figure.image.is-48x48
+                    img(src='/images/minecraft/dargon_bust.png', alt="Dargon's Bust")
+                .media-content
+                  p.title.is-4 Dargon's Server
+                  p.subtitle.is-6 Owner: Dargon999
+            .content
+              p.subtitle IP: dargon.sebiann.moe
+              | Das ist Dargons Bau Server
+              a(href="https://forms.gle/zxCU9U5dMgkq4wdD6" target="_blank")
+                p Link zum Bewerben
