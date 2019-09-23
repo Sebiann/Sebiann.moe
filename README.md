@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/Sebiann/Sebiann.moe.svg?branch=master)](https://travis-ci.org/Sebiann/Sebiann.moe)
 # Sebiann.moe
 
 My Super dupper website written using PUG, YES A FRICKING PUG
