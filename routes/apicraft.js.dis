@@ -1,0 +1,18 @@
+var express = require('express');
+var router = express.Router();
+var Gamedig = require('gamedig');
+
+/* GET apicraft page. */
+router.get('/apicraft', function (req, res) {
+  Gamedig.query({
+    type: 'minecraft',
+    host: 'play.sebiann.moe',
+    port: '25570'
+  }).then((state) => {
+    res.json(state.raw.players.sample);
+  }).catch((error) => {
+    res.json("Server is offline");
+  });
+});
+
+module.exports = router;

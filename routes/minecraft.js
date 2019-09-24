@@ -2,7 +2,7 @@ var express = require('express')
 var router = express.Router()
 
 /* GET minecraft page. */
-router.get('/minecraft', function (req, res, next) {
+router.get('/minecraft', function (req, res) {
   res.render('minecraft', { title: 'Sebiann.moe: Minecraft' })
 })
 
