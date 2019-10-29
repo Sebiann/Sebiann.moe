@@ -21,12 +21,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Edit to add more pages
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var minecraftRouter = require('./routes/minecraft');
 var deadmcRouter = require('./routes/deadmc');
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/', minecraftRouter);
 app.use('/', deadmcRouter);
 // Not under here though
