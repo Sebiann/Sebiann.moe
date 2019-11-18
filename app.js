@@ -23,10 +23,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 var indexRouter = require('./routes/index');
 var minecraftRouter = require('./routes/minecraft');
 var deadmcRouter = require('./routes/deadmc');
+var projectsRouter = require('./routes/projects')
 
 app.use('/', indexRouter);
 app.use('/', minecraftRouter);
 app.use('/', deadmcRouter);
+app.use('/', projectsRouter);
 // Not under here though
 
 // catch 404 and forward to error handler
