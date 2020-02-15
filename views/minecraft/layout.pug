@@ -1,0 +1,58 @@
+doctype html
+html(prefix="og: http://ogp.me/ns#")
+  head
+    title= title
+
+    // Meta tags
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    // Open graph http://ogp.me/
+    meta(property='og:title', content='Sebiann.moe')
+    meta(property='og:type', content='website')
+    meta(property='og:url', content='https://Sebiann.moe')
+    meta(property='og:image', content='https://Sebiann.moe/images/sebi-logo.png')
+
+    // Stylesheet
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+    // Third party stylesheets
+    // https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css
+    // https://fonts.googleapis.com/css?family=Open+Sans
+    link(rel="stylesheet", href='/stylesheets/opensans.css') 
+    link(rel='stylesheet', href='/stylesheets/bulma.min.css')
+
+  body
+    header
+      nav.navbar
+        .container
+          .navbar-brand
+            a.navbar-item(href="/")
+              img(src="/images/Logo.png", alt="Seb's Awesome Logo")
+            
+            a.navbar-burger(role="button" data-target="navMenu")
+              span(aria-hidden="true")
+              span(aria-hidden="true")
+              span(aria-hidden="true")
+          .navbar-menu#navMenu
+            .navbar-start
+              a.navbar-item(href="/minecraft")
+                span.icon.has-text-link
+                  i.fas.fa-server
+                span Minecraft
+              a.navbar-item(href="/deadmc")
+                span.icon.has-text-link
+                  i.fas.fa-battery-empty
+                span Dead MC
+            .navbar-end
+              a.navbar-item(href="https://github.com/Sebiann/Sebiann.moe", target="_blank")
+                span.icon.has-text-link
+                  i.fab.fa-github
+                span View on GitHub
+                
+    block content
+
+  // Javascript
+  script(type="text/javascript" src="/javascripts/navbar.js")
+
+  // Third party JS
+  script(defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous")
