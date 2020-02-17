@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // var ms = require('./minestat');
 var createError = require('http-errors');
 var express = require('express');
@@ -34,7 +35,7 @@ app.use('/', minecraftvikingRouter);
 // Not under here though
 
 // catch 404 and forward to error handler
-app.use(function (req, res, next) {
+app.use(function (_req, _res, next) {
   next(createError(404))
 })
 

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /*eslint no-undef: 1*/
 document.addEventListener('DOMContentLoaded', function () {
   // Get all "navbar-burger" elements

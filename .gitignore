@@ -1,3 +1,6 @@
+#Zip files
+public/minecraft
+
 # Logs
 logs
 *.log
