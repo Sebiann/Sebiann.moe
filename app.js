@@ -25,13 +25,15 @@ var indexRouter = require('./routes/index');
 var minecraftRouter = require('./routes/minecraft');
 var deadmcRouter = require('./routes/deadmc');
 var projectsRouter = require('./routes/projects');
-var minecraftvikingRouter = require('./routes/viking');
+var minecraftCeriRouter = require('./routes/Ceri');
+var minecraftCeriMembersRouter = require('./routes/ceri-members');
 
 app.use('/', indexRouter);
 app.use('/', minecraftRouter);
 app.use('/', deadmcRouter);
 app.use('/', projectsRouter);
-app.use('/', minecraftvikingRouter);
+app.use('/', minecraftCeriRouter);
+app.use('/', minecraftCeriMembersRouter);
 // Not under here though
 
 // catch 404 and forward to error handler
