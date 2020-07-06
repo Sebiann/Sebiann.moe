@@ -1,5 +1,7 @@
 #Zip files
 public/minecraft
+public/download
+public/images/priv
 
 # Logs
 logs
