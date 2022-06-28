@@ -1,7 +1,10 @@
 #Zip files
 public/minecraft
 public/download
+public/preview
 public/images/priv
+public/images/MCU
+public/images/dizquetv
 
 # Logs
 logs

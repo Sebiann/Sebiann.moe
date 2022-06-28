@@ -3,22 +3,27 @@ extends layout
 block content
   section.section
     .container
-      .columns.is-multiline
+      .columns        
         .column.is-one-third
           .card.card-equal-height
             .card-image
-              figure.image
-                img(src='/images/', alt='PUT IMAGE HERE')
+              iframe(src="/", width="100%", height="400px")
             .card-content
               .media
                 .media-left
                   figure.image.is-48x48
-                    img(src='/images/', alt="PUT IMAGE HERE")
+                    img(src='/images/sebi-logo.png', alt='Sebiann')
                 .media-content
-                  p.title.is-4 IN CONSTRUCTION
-                  p.subtitle.is-6 S
-            .content
-                p.subtitle IP: EMPTY
-                | EMPTY
-                a(href="" target="_blank")
-                  p EMPTY
+                  p.title.is-4 
+                    a(href="https://sebiann.moe", target="_blank") Sebiann.moe
+                  p.subtitle.is-6 This website
+              .content
+                | Looks like you are already browsing it!
+                br 
+                | Source available on 
+                a(href="https://github.com/Sebiann/Sebiann.moe", target="_blank") GitHub 
+                br
+                a(href='https://nodejs.org/en/', target="_blank") #nodeJS 
+                a(href='https://expressjs.com/', target="_blank") #express
+          
+

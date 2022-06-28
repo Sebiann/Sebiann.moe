@@ -6,4 +6,4 @@ Its nice
 I wanna thank Austin(@Hoi15A)
 ### License
 
-All code in this repo is licensed under AGPL-3.0 Copyright © 2020 Sebiann
+All code in this repo is licensed under AGPL-3.0 Copyright © 2022 Sebiann

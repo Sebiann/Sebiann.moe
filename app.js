@@ -23,17 +23,21 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Edit to add more pages
 var indexRouter = require('./routes/index');
 var minecraftRouter = require('./routes/minecraft');
-var deadmcRouter = require('./routes/deadmc');
+// var deadmcRouter = require('./routes/deadmc');
 var projectsRouter = require('./routes/projects');
-var minecraftCeriRouter = require('./routes/Ceri');
-var minecraftCeriMembersRouter = require('./routes/ceri-members');
+// var gameshowRouter = require('./routes/gameshow');
+// var minecraftCeriRouter = require('./routes/Ceri');
+// var minecraftCeriMembersRouter = require('./routes/ceri-members');
+// var cookRouter = require('./routes/cook');
 
 app.use('/', indexRouter);
 app.use('/', minecraftRouter);
-app.use('/', deadmcRouter);
+// app.use('/', deadmcRouter);
 app.use('/', projectsRouter);
-app.use('/', minecraftCeriRouter);
-app.use('/', minecraftCeriMembersRouter);
+// app.use('/', gameshowRouter);
+// app.use('/', minecraftCeriRouter);
+// app.use('/', minecraftCeriMembersRouter);
+// app.use('/', cookRouter);
 // Not under here though
 
 // catch 404 and forward to error handler
