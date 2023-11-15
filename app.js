@@ -6,12 +6,34 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var lessMiddleware = require('less-middleware');
 var logger = require('morgan');
+const fs = require('fs');
 
 var app = express();
+
+// Function to get all files in a directory and its subdirectories
+function getFiles(dir, fileList = []) {
+  const files = fs.readdirSync(dir);
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    if (fs.statSync(filePath).isDirectory()) {
+      getFiles(filePath, fileList);
+    } else {
+      fileList.push(filePath);
+    }
+  });
+  return fileList;
+}
+
+// Get all files in the 'images' directory and its subdirectories
+const imagePaths = getFiles(path.join(__dirname, 'public/images'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+
+app.get('/images', (req, res) => {
+  res.render('images', { imagePaths });
+});
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -25,6 +47,7 @@ var indexRouter = require('./routes/index');
 var minecraftRouter = require('./routes/minecraft');
 // var deadmcRouter = require('./routes/deadmc');
 var projectsRouter = require('./routes/projects');
+// var imagesRouter = require('./routes/images');
 // var gameshowRouter = require('./routes/gameshow');
 // var minecraftCeriRouter = require('./routes/Ceri');
 // var minecraftCeriMembersRouter = require('./routes/ceri-members');
@@ -34,6 +57,7 @@ app.use('/', indexRouter);
 app.use('/', minecraftRouter);
 // app.use('/', deadmcRouter);
 app.use('/', projectsRouter);
+// app.use('/', imagesRouter);
 // app.use('/', gameshowRouter);
 // app.use('/', minecraftCeriRouter);
 // app.use('/', minecraftCeriMembersRouter);

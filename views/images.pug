@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  section.section
+    .container
+      ul
+        each imagePath in imagePaths
+          li
+            a(href=imagePath)= imagePath
